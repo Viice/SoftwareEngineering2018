@@ -1,0 +1,10 @@
+Randall Krueger
+9/7/28
+Software Design
+Reflection
+
+In the beginning this assignment seemed very daunting, but by the end I felt much more confident in my java class design, specifically the strategy pattern.  The strategy differs by horse, but judging by the sample input provided by the assignment, the race class ultimately sets the strategy for each horse by calling the enrollHorse method.
+
+I used an interface for the strategy hierarchy.  Each strategy class only had one method, the run method, that sees the horse's distance and calculates the amount the horse runs during this 'tick' based on that value and, of course, which strategy class the horse is employing.  Other than the three strategies, the interface, and the race class, I needed a horse class to store the various values associated with each individual horse, and of course, a main as requested by the assignment and the test files.
+
+The control loop is within the race, itself, so that a main can call a race, and just tell it to run - the race will keep track of all the horses, and exit when one has won.  I managed the horses with a simple list.  I went with this over an array, as I didn't want to declare the number of horses before the race is created - I wanted the main execution to be able to call a method of race to just add a horse, and do this as many times as desired.  I didn't need anything fancier than a list - all I needed was its expanding capabilities and a way to iterate over the horses.
